@@ -2,6 +2,29 @@
 
 Aplicação Dockerizada usando Node.js, Nginx como reverse proxy e MySQL como banco de dados.
 
+## Início Rápido
+
+### Pré-requisitos
+
+- Docker 20.10+
+- Docker Compose 2.0+
+
+### Executar a Aplicação
+
+```bash
+# Subir todos os containers
+docker compose up --build -d
+
+# Acessar aplicação
+curl http://localhost:8080
+```
+
+### Parar a Aplicação
+
+```bash
+docker compose down
+
+```
 ## Stack Tecnológico
 
 | Componente | Versão | Imagem Base |
@@ -25,31 +48,6 @@ node-docker/
 │   ├── Dockerfile            # Build do Nginx
 │   └── nginx.config          # Configuração do reverse proxy
 └── mysql/                    # Volume persistente (auto-criado)
-```
-
-## Início Rápido
-
-### Pré-requisitos
-
-- Docker 20.10+
-- Docker Compose 2.0+
-
-### Executar a Aplicação
-
-```bash
-# Subir todos os containers
-docker compose up --build -d
-
-# Acessar aplicação
-curl http://localhost:8080
-```
-
-### Parar a Aplicação
-
-```bash
-# Parar containers
-docker compose down
-
 ```
 
 ### Ordem de Inicialização
